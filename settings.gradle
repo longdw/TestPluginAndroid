@@ -1,0 +1,9 @@
+include ':app'
+rootProject.name='TestPluginAndroid'
+
+
+setBinding(new Binding([gradle: this]))                                 // new
+evaluate(new File(                                                      // new
+        settingsDir.parentFile,                                               // new
+        'testplugin/.android/include_flutter.groovy'                          // new
+))
